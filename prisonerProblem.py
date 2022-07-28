@@ -1,3 +1,4 @@
+from audioop import mul
 import random
 
 def test(prisoners) :
@@ -32,4 +33,16 @@ def test(prisoners) :
     
     return sucess
 
-test(100)
+def multipleTests(amount, prisoners) :
+    successes = 0
+
+    for i in range(amount) :
+        if test(prisoners) :
+            successes += 1
+    
+    print(f"{successes} out of {amount} attempts were successful.")
+    print(f"Chance: {(successes / amount)*100}%")
+
+    return successes
+
+multipleTests(1000000, 100)
