@@ -15,11 +15,11 @@ def test(prisoners) :
 
     for i in range(prisoners) :
         foundMyBox = False
-        boxesSearched = []
+        boxesSearched = 0
         target = i
 
-        while not foundMyBox and len(boxesSearched) <= prisoners / 2 :
-            boxesSearched.append(target)
+        while not foundMyBox and boxesSearched <= prisoners / 2 :
+            boxesSearched += 1
             
             if boxes[target] == i : #Box found!
                 foundMyBox = True
