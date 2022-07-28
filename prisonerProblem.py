@@ -18,7 +18,7 @@ def test(prisoners) :
         boxesSearched = 0
         target = i
 
-        while not foundMyBox and boxesSearched <= prisoners / 2 :
+        while not foundMyBox and boxesSearched < prisoners / 2 :
             boxesSearched += 1
             
             if boxes[target] == i : #Box found!
