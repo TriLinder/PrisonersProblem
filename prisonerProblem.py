@@ -45,4 +45,8 @@ def multipleTests(amount, prisoners) :
 
     return successes
 
-multipleTests(1000000, 100)
+if __name__ == "__main__" :
+    prisoners = int(input("Amount of prisoners: "))
+    attempts = int(input("Amount of attempts: "))
+    
+    multipleTests(attempts, prisoners)
